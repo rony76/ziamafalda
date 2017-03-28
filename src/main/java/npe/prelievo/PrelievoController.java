@@ -16,6 +16,13 @@ public class PrelievoController {
     private CiclistaRepository ciclistaRepository;
 
     @GetMapping("/")
+    public String index(Map<String, Object> model) {
+        model.put("time", new Date());
+        model.put("operatore", "Marione");
+        return "index";
+    }
+
+    @GetMapping("/nuovo-prelievo.html")
     public String welcome(Map<String, Object> model) {
         model.put("time", new Date());
         model.put("operatore", "Marione");
@@ -24,6 +31,7 @@ public class PrelievoController {
 
     @PostMapping("/nuovo-prelievo.html")
     public String salvaNuovoPrelievo(Ciclista ciclista, Map<String, Object> model) {
+
         try {
             ciclistaRepository.save(ciclista);
             model.put("risultato-operazione-precedente", "successo");
