@@ -17,28 +17,25 @@ public class PrelievoController {
 
     @GetMapping("/")
     public String index(Map<String, Object> model) {
-        model.put("time", new Date());
-        model.put("operatore", "Marione");
         return "index";
     }
 
-    @GetMapping("/nuovo-prelievo.html")
+    @GetMapping("/marione.html")
     public String welcome(Map<String, Object> model) {
         model.put("time", new Date());
         model.put("operatore", "Marione");
-        return "nuovo-prelievo";
+        return "marione";
     }
 
     @PostMapping("/nuovo-prelievo.html")
     public String salvaNuovoPrelievo(Ciclista ciclista, Map<String, Object> model) {
-
         try {
             ciclistaRepository.save(ciclista);
-            model.put("risultato-operazione-precedente", "successo");
+            model.put("risultatoOperazionePrecedente", "successo");
+            return "redirect:marione.html#visualizza";
         } catch (Exception e) {
-            model.put("risultato-operazione-precedente", "fallimento: " + e.getMessage());
+            model.put("risultatoOperazionePrecedente", "fallimento: " + e.getMessage());
+            return "redirect:marione.html#inserisci";
         }
-
-        return welcome(model);
     }
 }

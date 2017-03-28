@@ -86,7 +86,8 @@
                     <span class="fa-stack fa-4x">
                         <i class="fa fa-circle fa-stack-2x text-primary"></i>
                         <i class="fa fa-bicycle fa-stack-1x fa-inverse"></i>
-                    </span> <form action="#" method="get">
+                    </span>
+                    <form action="nuovo-prelievo.html" method="post">
         <table border="0" align="center">
             <tr>
                 <td align="left">
@@ -113,25 +114,17 @@
                 </td>
             </tr>
             <tr>
-                <td align="left">
-                    Orario prelievo: 
-                </td>
-                <td align="left">
-                    <input type="text" value="" name="orarioPrelievo" id="orario"/>
-                </td>
-            </tr>
-            <tr>
                 <td align="center" colspan="2">
                     <input type="submit" value="Invia" name="invio"/>
                 </td>
             </tr>
-            <tr>
-                <td align="center" colspan="2" id="messaggio">
-                    {{#risultato-operazione-precedente}}
-                        {{risultato-operazione-precedente}}
-                    {{/risultato-operazione-precedente}}
-                </td>
-            </tr>
+            <#if risultatoOperazionePrecedente?has_content>
+                <tr>
+                    <td align="center" colspan="2" id="messaggio">
+                        ${risultatoOperazionePrecedente}
+                    </td>
+                </tr>
+            </#if>
         </table>
     </form>
                     
