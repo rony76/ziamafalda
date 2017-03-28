@@ -10,7 +10,7 @@
     <table border="0" align="center">
         <tr>
             <td align="left">
-                Nome:
+                <label for="nome">Nome</label>
             </td>
             <td align="left">
                 <input type="text" value="" name="nome" id="nome"/>
@@ -18,7 +18,7 @@
         </tr>
         <tr>
             <td align="left">
-                Cognome:
+                <label for="cognome">Cognome</label>
             </td>
             <td align="left">
                 <input type="text" value="" name="cognome" id="cognome"/>
@@ -26,7 +26,7 @@
         </tr>
         <tr>
             <td align="left">
-                Telefono:
+                <label for="telefono">Telefono</label>
             </td>
             <td align="left">
                 <input type="text" value="" name="telefono" id="telefono"/>
@@ -34,7 +34,7 @@
         </tr>
         <tr>
             <td align="left">
-                Orario prelievo:
+                <label for="orario">Orario prelievo</label>
             </td>
             <td align="left">
                 <input type="text" value="" name="orarioPrelievo" id="orario"/>
@@ -45,10 +45,10 @@
                 <input type="submit" value="Invia" name="invio"/>
             </td>
         </tr>
-        <#if risultatoOperazionePrecedente?has_content>
+        <#if risultatoOperazionePrecedente??>
         <tr>
-            <td align="center" colspan="2" id="messaggio">
-                ${risultatoOperazionePrecedente}
+            <td align="center" colspan="2" id="messaggio" class="">
+                ${risultatoOperazionePrecedente.messaggio}
             </td>
         </tr>
         </#if>
