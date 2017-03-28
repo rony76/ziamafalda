@@ -47,7 +47,9 @@
             </tr>
             <tr>
                 <td align="center" colspan="2" id="messaggio">
-                    
+                    {{#risultato-operazione-precedente}}
+                        <font color='green'>Operazione andata a buon fine</font>
+                    {{/risultato-operazione-precedente}}
                 </td>
             </tr>
         </table>
@@ -55,7 +57,7 @@
 </body>
     <script>
         
-        if(true)
+        if(false)
         {
               document.getElementById("messaggio").innerHTML="<font color='green'>Operazione andata a buon fine</font>";  
         }
