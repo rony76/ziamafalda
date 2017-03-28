@@ -4,17 +4,16 @@
     <meta charset="UTF-8">
     <title>Zia Mafalda - Nuovo prelievo</title>
 </head>
-<body>
+<body align="center">
     <h1>Ciao {{operatore}}!</h1>
-<p> Sono le {{time}}</p>
     <form action="#" method="get">
-        <table border="1" width="100%">
+        <table border="0" align="center">
             <tr>
                 <td align="left">
                     Nome: 
                 </td>
                 <td align="left">
-                    <input type="text" value="inserire nome" name="nome"/>
+                    <input type="text" value="" name="nome" id="nome"/>
                 </td>
             </tr>
             <tr>
@@ -22,7 +21,7 @@
                     Cognome: 
                 </td>
                 <td align="left">
-                    <input type="text" value="inserire cognome" name="cognome"/>
+                    <input type="text" value="" name="cognome" id="cognome"/>
                 </td>
             </tr>
             <tr>
@@ -30,10 +29,39 @@
                     Telefono: 
                 </td>
                 <td align="left">
-                    <input type="text" value="inserire telefono" name="telefono"/>
+                    <input type="text" value="" name="telefono" id="telefono"/>
+                </td>
+            </tr>
+            <tr>
+                <td align="left">
+                    Orario prelievo: 
+                </td>
+                <td align="left">
+                    <input type="text" value="" name="orarioPrelievo" id="telefono"/>
+                </td>
+            </tr>
+            <tr>
+                <td align="center" colspan="2">
+                    <input type="submit" value="Invia" name="invio" id="invio"/>
+                </td>
+            </tr>
+            <tr>
+                <td align="center" colspan="2" id="messaggio">
+                    
                 </td>
             </tr>
         </table>
     </form>
 </body>
+    <script>
+        
+        if(true)
+        {
+              document.getElementById("messaggio").innerHTML="<font color='green'>Operazione andata a buon fine</font>";  
+        }
+        
+        
+        var n=document.getElementById("nome").value;
+        document.getElementById("cognome").setAttribute('value',n);
+    </script>
 </html>
