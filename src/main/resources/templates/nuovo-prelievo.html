@@ -37,12 +37,12 @@
                     Orario prelievo: 
                 </td>
                 <td align="left">
-                    <input type="text" value="" name="orarioPrelievo" id="telefono"/>
+                    <input type="text" value="" name="orarioPrelievo" id="orario"/>
                 </td>
             </tr>
             <tr>
                 <td align="center" colspan="2">
-                    <input type="submit" value="Invia" name="invio" id="invio"/>
+                    <input type="submit" value="Invia" name="invio"/>
                 </td>
             </tr>
             <tr>
@@ -57,13 +57,17 @@
 </body>
     <script>
         
-        if(false)
-        {
-              document.getElementById("messaggio").innerHTML="<font color='green'>Operazione andata a buon fine</font>";  
-        }
+//        function controlla()
+//        {
+//            var n=document.getElementById("nome").value;
+//            var c=document.getElementById("cognome").value;
+//            var tel=document.getElementById("telefono").value;
+//            var orario=document.getElementById("orario").value;
+//            if(n=="" || c=="" || tel=="" || orario=="")
+//            {
+//                document.getElementById("messaggio").innerHTML="compilare tutti i campi";
+//            }
+//        }
         
-        
-        var n=document.getElementById("nome").value;
-        document.getElementById("cognome").setAttribute('value',n);
     </script>
 </html>
