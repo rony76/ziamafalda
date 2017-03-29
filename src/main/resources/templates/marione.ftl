@@ -68,7 +68,7 @@
             <div class="intro-text">
                 <div class="intro-heading">Ciao Marione !</div>
                 <a href="#inserisci" class="page-scroll btn btn-xl">Inserisci Prelievo</a>
-                <a href="marioneVisualizza.html#visualizza" class="page-scroll btn btn-xl">Visualizza Prelievi</a>
+                <a href="marione-visualizza.html#visualizza" class="page-scroll btn btn-xl">Visualizza Prelievi</a>
             </div>
         </div>
     </header>
@@ -88,7 +88,7 @@
                         <i class="fa fa-bicycle fa-stack-1x fa-inverse"></i>
 
                     </span>
-                    <form action="nuovo-prelievo.html" method="post">
+                    <form method="post">
         <table border="0" align="center">
             <tr>
                 <td align="left">
@@ -131,7 +131,7 @@
                     
                     <br>
                     <br>
-                <a href="marioneVisualizza.html#visualizza" class="page-scroll btn btn-xl">Visualizza Prelievi</a>
+                <a href="marione-visualizza.html#visualizza" class="page-scroll btn btn-xl">Visualizza Prelievi</a>
                 </div>
             </div>
         </div>

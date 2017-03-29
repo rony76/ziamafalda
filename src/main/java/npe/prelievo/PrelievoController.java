@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.Date;
 import java.util.Map;
@@ -20,22 +21,26 @@ public class PrelievoController {
         return "index";
     }
 
-    @GetMapping("/marione.html")
-    public String welcome(Map<String, Object> model) {
+    @GetMapping("/marione-inserisci.html")
+    public String inserisci(Map<String, Object> model) {
         model.put("time", new Date());
         model.put("operatore", "Marione");
         return "marione";
     }
 
-    @PostMapping("/nuovo-prelievo.html")
+    @PostMapping("/marione-inserisci.html")
     public String salvaNuovoPrelievo(Ciclista ciclista, Map<String, Object> model) {
         try {
             ciclistaRepository.save(ciclista);
-            model.put("risultatoOperazionePrecedente", "successo");
-            return "redirect:marione.html#visualizza";
+            return "redirect:marione-visualizza.html#visualizza";
         } catch (Exception e) {
             model.put("risultatoOperazionePrecedente", "fallimento: " + e.getMessage());
-            return "redirect:marione.html#inserisci";
+            return inserisci(model);
         }
+    }
+
+    @GetMapping("/marione-visualizza.html")
+    public String visualizza(Map<String, Object> model) {
+        return "visualizza";
     }
 }

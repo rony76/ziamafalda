@@ -67,7 +67,7 @@
         <div class="container">
             <div class="intro-text">
                 <div class="intro-heading">Ciao Marione !</div>
-                <a href="#inserisci" class="page-scroll btn btn-xl">Inserisci Prelievo</a>
+                <a href="marione-inserisci.html#inserisci" class="page-scroll btn btn-xl">Inserisci Prelievo</a>
                 <a href="#visualizza" class="page-scroll btn btn-xl">Visualizza Prelievi</a>
             </div>
         </div>
@@ -105,7 +105,7 @@
                         </table>
                     <br>
                     <br>
-                <a href="#inserisci" class="page-scroll btn btn-xl">Inserisci Nuovo Prelievo</a>
+                <a href="marione-inserisci.html#inserisci" class="page-scroll btn btn-xl">Inserisci Nuovo Prelievo</a>
                      
                 </div>
             </div>
