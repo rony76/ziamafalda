@@ -13,7 +13,7 @@ public class Ciclista {
     private String telefono;
 
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     public Long getId() {
         return id;
     }
@@ -47,5 +47,15 @@ public class Ciclista {
 
     public void setTelefono(String telefono) {
         this.telefono = telefono;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder buf = new StringBuilder().append(nome).append(' ').append(cognome).append('(');
+        if (id == null)
+            buf.append("nuovo");
+        else
+            buf.append(id);
+        return buf.append("), tel '").append(telefono).append('\'').toString();
     }
 }
