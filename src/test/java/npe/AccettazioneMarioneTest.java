@@ -20,6 +20,6 @@ public class AccettazioneMarioneTest {
     @Test
     public void name() throws Exception {
         String body = restTemplate.getForObject("/marione.html", String.class);
-        assertThat(body).isEqualTo("Hello World");
+        assertThat(body).contains("Ciao Marione !");
     }
 }
