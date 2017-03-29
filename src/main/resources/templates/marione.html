@@ -66,19 +66,19 @@
     <header>
         <div class="container">
             <div class="intro-text">
-                <div class="intro-lead-in">Benvenuti !</div>
-                <div class="intro-heading">Pedala la Certosa</div>
-                <a href="#orari" class="page-scroll btn btn-xl">Inizia a pedalare</a>
+                <div class="intro-heading">Ciao Marione !</div>
+                <a href="#inserisci" class="page-scroll btn btn-xl">Inserisci Prelievo</a>
+                <a href="#visualizza" class="page-scroll btn btn-xl">Visualizza Prelievi</a>
             </div>
         </div>
     </header>
 
-    <!-- Services Section -->
-    <section id="orari">
+    <!-- Inserisci Section -->
+    <section id="inserisci">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Orari</h2>
+                    <h2 class="section-heading">Inserisci Prelievi</h2>
                 </div>
             </div>
             <div class="row text-center">
@@ -86,13 +86,80 @@
                     <span class="fa-stack fa-4x">
                         <i class="fa fa-circle fa-stack-2x text-primary"></i>
                         <i class="fa fa-bicycle fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <p class="text-muted">inserire orari############</p>
+                    </span> <form action="#" method="get">
+        <table border="0" align="center">
+            <tr>
+                <td align="left">
+                    Nome: 
+                </td>
+                <td align="left">
+                    <input type="text" value="" name="nome" id="nome"/>
+                </td>
+            </tr>
+            <tr>
+                <td align="left">
+                    Cognome: 
+                </td>
+                <td align="left">
+                    <input type="text" value="" name="cognome" id="cognome"/>
+                </td>
+            </tr>
+            <tr>
+                <td align="left">
+                    Telefono: 
+                </td>
+                <td align="left">
+                    <input type="text" value="" name="telefono" id="telefono"/>
+                </td>
+            </tr>
+            <tr>
+                <td align="left">
+                    Orario prelievo: 
+                </td>
+                <td align="left">
+                    <input type="text" value="" name="orarioPrelievo" id="orario"/>
+                </td>
+            </tr>
+            <tr>
+                <td align="center" colspan="2">
+                    <input type="submit" value="Invia" name="invio"/>
+                </td>
+            </tr>
+            <tr>
+                <td align="center" colspan="2" id="messaggio">
+                    {{#risultato-operazione-precedente}}
+                        {{risultato-operazione-precedente}}
+                    {{/risultato-operazione-precedente}}
+                </td>
+            </tr>
+        </table>
+    </form>
+                    
+                <a href="#visualizza" class="page-scroll btn btn-xl">Visualizza Prelievi</a>
                 </div>
             </div>
         </div>
     </section>
 
+    
+    <!-- Tabella Section -->
+    <section id="visualizza">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Prelievi</h2>
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col-md-12">
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-bicycle fa-stack-1x fa-inverse"></i>
+                    </span> 
+                </div>
+            </div>
+        </div>
+    </section>
     
 
     <footer>
