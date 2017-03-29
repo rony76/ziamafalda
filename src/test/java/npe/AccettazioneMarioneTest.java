@@ -19,7 +19,7 @@ public class AccettazioneMarioneTest {
 
     @Test
     public void name() throws Exception {
-        String body = this.restTemplate.getForObject("/marione.html", String.class);
+        String body = restTemplate.getForObject("/marione.html", String.class);
         assertThat(body).isEqualTo("Hello World");
     }
 }
