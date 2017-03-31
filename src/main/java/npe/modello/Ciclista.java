@@ -1,6 +1,8 @@
 package npe.modello;
 
 import javax.persistence.*;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.io.Serializable;
@@ -24,7 +26,7 @@ public class Ciclista {
     }
 
     @NotNull
-    @Size(min = 1, max = 128)
+    @Size(min = 2, max = 128)
     public String getNome() {
         return nome;
     }
@@ -34,7 +36,7 @@ public class Ciclista {
     }
 
     @NotNull
-    @Size(min = 1, max = 128)
+    @Size(min = 2, max = 128)
     public String getCognome() {
         return cognome;
     }
@@ -44,7 +46,7 @@ public class Ciclista {
     }
 
     @NotNull
-    @Size(min = 1, max = 45)
+    @Size(min = 2, max = 64)
     public String getTelefono() {
         return telefono;
     }
