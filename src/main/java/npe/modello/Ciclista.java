@@ -2,6 +2,7 @@ package npe.modello;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import java.io.Serializable;
 
 @Entity
@@ -23,6 +24,7 @@ public class Ciclista {
     }
 
     @NotNull
+    @Size(min = 1, max = 128)
     public String getNome() {
         return nome;
     }
@@ -32,6 +34,7 @@ public class Ciclista {
     }
 
     @NotNull
+    @Size(min = 1, max = 128)
     public String getCognome() {
         return cognome;
     }
@@ -41,6 +44,7 @@ public class Ciclista {
     }
 
     @NotNull
+    @Size(min = 1, max = 45)
     public String getTelefono() {
         return telefono;
     }
@@ -52,10 +56,11 @@ public class Ciclista {
     @Override
     public String toString() {
         StringBuilder buf = new StringBuilder().append(nome).append(' ').append(cognome).append('(');
-        if (id == null)
+        if (id == null) {
             buf.append("nuovo");
-        else
+        } else {
             buf.append(id);
+        }
         return buf.append("), tel '").append(telefono).append('\'').toString();
     }
 }
