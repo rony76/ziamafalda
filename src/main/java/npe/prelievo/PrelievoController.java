@@ -47,6 +47,7 @@ public class PrelievoController {
 
     @GetMapping("/marione-visualizza.html")
     public String visualizza(Map<String, Object> model) {
+        model.put("ciclisti", ciclistaRepository.findAll());
         return "visualizza";
     }
 }
