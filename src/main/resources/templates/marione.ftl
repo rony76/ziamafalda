@@ -75,8 +75,8 @@
     <div class="container">
         <div class="intro-text">
             <div class="intro-heading">Ciao Marione !</div>
-            <a href="#inserisci" class="page-scroll btn btn-xl">Inserisci Prelievo</a>
-            <a href="marione-visualizza.html#visualizza" class="page-scroll btn btn-xl">Visualizza Prelievi</a>
+            <a id="inserisci-button" href="#inserisci" class="page-scroll btn btn-xl">Inserisci Prelievo</a>
+            <a id="visualizza-button" href="marione-visualizza.html#visualizza" class="page-scroll btn btn-xl">Visualizza Prelievi</a>
         </div>
     </div>
 </header>
@@ -136,7 +136,7 @@
                         </tr>
                         <tr>
                             <td align="center" colspan="3">
-                                <input type="submit" value="Invia" name="invio"/>
+                                <input id="submit-button" type="submit" value="Invia" name="invio"/>
                             </td>
                         </tr>
                     <#if risultatoOperazionePrecedente?has_content>

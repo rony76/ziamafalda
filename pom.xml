@@ -97,7 +97,8 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <specsDir>src/test/specs</specsDir>
+                    <specsDir>src/test/specs/marione</specsDir>
+                    <env>localhost-atdd</env>
                 </configuration>
             </plugin>
         </plugins>

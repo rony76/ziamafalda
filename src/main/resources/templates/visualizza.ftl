@@ -74,8 +74,8 @@
     <div class="container">
         <div class="intro-text">
             <div class="intro-heading">Ciao Marione !</div>
-            <a href="marione-inserisci.html#inserisci" class="page-scroll btn btn-xl">Inserisci Prelievo</a>
-            <a href="#visualizza" class="page-scroll btn btn-xl">Visualizza Prelievi</a>
+            <a id="inserisci-button" href="marione-inserisci.html#inserisci" class="page-scroll btn btn-xl">Inserisci Prelievo</a>
+            <a id="visualizza-button" href="#visualizza" class="page-scroll btn btn-xl">Visualizza Prelievi</a>
         </div>
     </div>
 </header>
@@ -95,7 +95,7 @@
                         <i class="fa fa-circle fa-stack-2x text-primary"></i>
                         <i class="fa fa-bicycle fa-stack-1x fa-inverse"></i>
                     </span>
-                <table border="1" align="center">
+                <table border="1" align="center" id="ciclisti">
                     <thead>
                     <tr>
                         <th>Nome</th>
